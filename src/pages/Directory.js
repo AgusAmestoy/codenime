@@ -7,6 +7,7 @@ import Footer from "../components/Footer.js";
 
 import Filter from "../components/Filters.js";
 import GeneratePagination from "../components/Pagination.js"
+import Animelist from "../components/Animelist.js";
 
 
 function Directory(){
@@ -27,10 +28,11 @@ function Directory(){
                     
                 </div>
                 <section className="directory-content">
+                    <Animelist></Animelist>
                     <div id="content-list" className="content-container">
                     </div>
-                    {GeneratePagination(85)}
-                </section>
+{/*                     {GeneratePagination(2)}
+ */}                </section>
             </main>
             <Footer></Footer>
         </>
