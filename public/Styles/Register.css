@@ -1,0 +1,111 @@
+.register{
+    padding: 2rem;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4) ), url("../img/Background/backgroundh.gif") no-repeat center/cover;
+    backdrop-filter: blur(1rem);
+}
+
+.register-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+}
+
+.image-showcase{
+    width: 30rem;
+    border: 0.25rem solid rgb(0,0,0);
+    overflow: hidden;
+    background: #fff;
+    border-radius:  25px 0 0 25px;
+}
+
+.image-showcase{
+    position: relative;
+}
+
+.image-showcase li img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----- ----- ----- Lo demas ----- ----- -----*/
+.Register-content{
+    max-width: 40%;
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 0 25px 25px 0;
+}
+
+.Register-content h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.Register-content .Botton-Registerwith{
+    margin: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.Register-content .Botton-Registerwith i:hover{
+    cursor: pointer;
+}
+
+.register-form button{
+    width: 75%;
+    font-size: 1.25rem;
+    position: relative;
+    transform: translate(-50%,0);
+    left: 50%;
+    margin: 1rem 0;
+}
+
+.register-form input{
+    margin: 1rem 0;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    height: 1.75rem;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+}
+
+span{
+    display: flex;
+    align-items: center;
+}
+
+span input{
+   width: 1rem !important;
+   margin-right: 1rem !important;
+}
+
+@media screen 
+and (max-width: 767px) {
+    .image-showcase{
+        display: none;
+    }
+    .Register-content{
+        border-radius: 25px;
+        max-width: 75%;
+    }
+}
+
+@media screen
+and (max-width: 480px){
+    
+    body{
+        background: var(--secondary-color);
+    }
+
+    .Register-content{
+        border-radius: 25px;
+        width: 90%;
+        max-width: 100%;
+    }
+}

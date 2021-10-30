@@ -1,0 +1,617 @@
+/*  
+    MASTER
+     En este archivo va el header(navbar), footer y todo
+    codigo que pueda ser utilizado en mas de una pestaña
+
+    1rem = 16px
+    es relativa al tamaño de fuente del html del body
+*/
+
+/*----- ----- ----- General ----- ----- -----*/
+@import url(//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93);
+
+:root{
+    --primary-color: rgb(20, 60, 200);
+    --primary2-color: rgb(180, 200, 255);
+    --white-color: rgb(180, 180, 180);
+    --secondary-color: rgb(10,10,10);
+}
+
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*----- ----- ----- Body y otros ----- ----- -----*/
+
+.hide{
+    display: none;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+a{
+    color: #fff;
+    text-decoration: none !important;
+}
+
+p{
+    margin: 0.5rem 0;
+}
+
+img{
+    width:100%;
+}
+
+body{
+    font-family: "Arial", sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    background: var(--secondary-color);
+    color: #999;
+}
+
+/*----- ----- ----- Scrollbar ----- ----- -----*/
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    width: 75%;
+    background: var(--white-color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+/*----- ----- ----- Header ----- ----- -----*/
+/* ----- Profile ----- */
+.Profile-Navbar img{
+    display: inline;
+    width: 2.60rem;
+    border-radius: 25px;
+}
+.Profile-Dropdown{
+    position: relative;
+}
+.Profile-Dropdown ul{
+    position: absolute;
+    max-height: 0;
+    margin: 1rem -2rem;
+    background: var(--secondary-color);
+    overflow: hidden;
+    transition: all 0.5s;
+    border-radius: 0 0 10px 10px;
+}
+
+.Profile-Dropdown ul li button,
+.Profile-Dropdown ul li a{
+    min-width: 6rem;
+    text-align: center;
+    margin: auto;
+}
+
+.Profile-Dropdown ul li{
+    
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    text-align: center;
+}
+.Profile-Dropdown.active ul{
+    max-height: 8rem;
+    transition: all 0.5s;
+}
+
+/* ----- Profile ----- */
+    
+.Home-header-top{
+    width: 90%;
+    margin: auto;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.Navbar-logo{
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 2.25rem !important;
+    line-height: 1.1 !important;
+    /* Fuente de letra del logo*/
+    font-family: "Bauhaus 93" !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Navbar-logo h1{
+    color: var(--primary-color);
+}
+
+.Navbar-logo em{
+    color: #fff;
+}
+
+.Home-nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.Home-nav a{
+    color: var(--white-color);
+    text-decoration: none;
+    margin-right: 1.3rem;
+    font-weight: bolder;
+}
+
+.Home-header-top .top #show-menu{
+    display: none;
+}
+
+.Home-nav a:hover, .Home-nav a.active{
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.Home-header-top .button{
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+.Home-header-top .Home-nav-search{
+    border: none;
+    border-bottom: 1px solid #fff;
+    height: 1.75rem;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.Home-header-top i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.Home-header-top i:hover{
+    color: #fff;
+    cursor: pointer;
+}
+@media screen 
+and (min-width: 481px) 
+and (max-width: 767px) {
+    .Home-header-top .top #show-menu{
+        display: block;
+    }
+
+    body{
+        margin-left: 0;
+    }
+
+    .Home-header-top{
+        width: 100%;
+        margin: auto;
+        padding: 1rem 1rem;
+        display: block;
+        position: relative;
+        z-index: 500;
+    }
+
+    .Home-header-top h1{
+        text-align: center;
+    }
+
+    .Home-header-top .Home-nav.show{
+        opacity: 1;
+        transition: 1s ease all;
+        display: block;
+    }
+
+    .Home-header-top .Home-nav{
+        display: none;
+        width: 100%;
+        margin-top: 1rem;
+        opacity: 0;
+    }
+       
+    .Home-header-top .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Home-header-top .top i{
+        font-size: 1.5rem;
+    }
+
+    .Home-header-top .Home-nav a{
+        font-size: 1rem;
+        padding: 1rem 0;
+        background: rgba(0,0,0,0.1);
+    }
+
+    .Home-header-top .Home-nav-search{
+        width: 50%;
+        margin: 2rem 0;
+    }
+}
+
+@media screen
+and (min-width: 320px) 
+and (max-width: 480px){
+
+    .Home-header-top .top #show-menu{
+        display: block;
+    }
+
+    body{
+        margin-left: 0;
+    }
+
+    .Home-header-top{
+        width: 100%;
+        margin: auto;
+        padding: 1rem 1rem;
+        display: block;
+        position: relative;
+        z-index: 500;
+    }
+
+    .Home-header-top h1{
+        text-align: center;
+    }
+
+    .Home-header-top .Home-nav.show{
+        opacity: 1;
+        transition: 1s ease all;
+        display: block;
+    }
+
+    .Home-header-top .Home-nav{
+        display: none;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .Navbar-logo a{
+        display: block;
+        width: fit-content;
+    }
+       
+    .Home-header-top .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Home-header-top .top i{
+        font-size: 1.5rem;
+    }
+
+    .Home-header-top .Home-nav a{
+        display: block;
+        padding: 1rem 0;
+        margin-top: 0.25rem;
+        background: rgba(0,0,0,0.1);
+    }
+
+    .Home-header-top input{
+        width: 85%;
+        margin: 2rem 0;
+    }
+
+    
+}
+
+/*----- ----- ----- Botones ----- ----- -----*/
+.button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    border-radius: 2.5px;
+}
+
+.buttonDark{
+    display: inline-block;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    padding: 0.5rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    border-radius: 2.5px;
+}
+
+.button-rounded{
+    border-radius: 5px;
+}
+.button-rounded2{
+    border-radius: 20px;
+}
+.button:hover{
+    opacity: 0.9;
+}
+.buttonDark:hover{
+    opacity: 0.7;
+    color: #000;
+    background: #fff;
+}
+.button-xl{ /*xl = Extra large*/
+    font-size:3rem;
+    padding: 2rem 2.6rem;
+    text-transform: uppercase;
+
+}
+.button-large{
+    font-size:1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+
+.language{
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+}
+.language option{
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgb(60, 60, 60);;
+}
+
+/* ----- ----- ----- Filtros ----- ----- ----- */
+/* ----- Dropdown ----- */
+label{
+    color:#fff;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 1rem auto;
+}
+
+.dropdown input[type=checkbox] {
+    color: var(--white-color);
+}
+
+.dropdown input[type=checkbox]:checked {
+    color: #fff;
+}
+
+.dropdown ul {
+    position: absolute;
+    top: 1rem;
+    border-radius: 10px;
+    left: 0;
+    list-style: none;
+    margin: 0.25rem 0;
+    display: none;
+    background-color: rgba(0,0,0, 0.95);
+    box-shadow: 0 3px 6px rgba(0,0,0,.175);
+}
+
+.dropdown .dropdown-menu.show{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) !important;
+    grid-gap: 0.5rem;
+    padding: 1rem;
+}
+
+.dropdown input[type=checkbox]:checked ul {
+    width: 100%;
+}
+
+.dropdown ul li {
+    position: relative;
+    min-width: 100px;
+}
+
+.dropdown ul li:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+.dropdown .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    font-size: 1px;
+    padding: 0;
+}
+
+/*----- ----- ----- Footer ----- ----- -----*/
+footer{
+    border-top: var(--primary-color) 0.1rem solid;
+    overflow: auto;
+    width: 100%;
+    margin: auto;
+    padding: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: var(--secondary-color);
+    padding-bottom: 1.25rem;
+}
+
+footer .info{
+    display: inline-block;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    padding: 0.5rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor:help;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    border-radius: 25px;
+}
+
+footer div{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+footer a{
+    margin: 1rem 1rem;
+}
+
+footer a:hover{
+    color: var(--primary-color);
+}
+
+footer p{
+    text-align: center;
+}
+    /* ----- Redes Sociales ----- */
+footer .social-media{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.fa-facebook:hover{
+    color: #3b5998; /*   Facebook color oficial según Google*/
+}
+
+.fa-instagram:hover{
+    color: #C13584;
+}
+
+.fa-twitter:hover{
+    color: #00acee;
+}
+
+.fa-google:hover{
+    color: #4285F4;
+}
+
+@media screen
+and (min-width: 481px) 
+and (max-width: 767px) {
+
+    footer{
+        overflow: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    footer > div{
+        width: 80%;
+        margin: auto;
+    }
+
+    footer p{
+        margin-top: 1rem;
+    }
+
+    footer div{
+        margin: auto;
+    }
+
+    footer .info{
+        width: 100%;
+        margin: auto;
+    }
+
+    footer .info a{
+        font-size: 0.9rem;
+        display: inline;
+        color: #fff;
+    }
+
+    footer .social-media{
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen
+and (min-width: 320px) 
+and (max-width: 480px){
+    footer{
+        overflow: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    footer > div{
+        width: 80%;
+        margin: auto;
+    }
+
+    footer p{
+        margin: 1rem auto;
+    }
+    footer div{
+        margin: auto;
+    }
+    footer .info{
+        width: 100%;
+        margin: auto;
+    }
+    footer .info a{
+        display: block;
+        color: #fff;
+    }
+    footer .social-media{
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}

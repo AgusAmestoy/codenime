@@ -1,0 +1,37 @@
+
+
+/*El siguiente contenido es de repuesto*/
+
+            /* ----- Botones ----- */
+
+            .ChapterNavbar{
+                display: flex;
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .ChapterNavbar .button i{
+                font-size: 1.25rem;
+            }
+
+            .ChapterNavbar .button{
+                font-size: 0.75rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+            }
+
+            .PC-button{
+                border-radius: 25px 0 0 25px;
+            }
+            .PC-button i{
+                margin-right: 0.5rem;
+            }
+            .NC-button{
+                border-radius: 0 25px 25px 0;
+            }
+
+            .NC-button i{
+                margin-left: 0.5rem;
+            }
