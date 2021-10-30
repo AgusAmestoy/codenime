@@ -10,6 +10,10 @@ import Comments from "../components/Comments.js"
 function Watch(){
     return(
         <>
+            <Helmet>
+                <link rel="stylesheet" href="./Styles/Watch.css"/>
+                <title>{Anime} {Chapter} - CodeNime</title>
+            </Helmet>
             <Navbar></Navbar>
             <AnimeVideo></AnimeVideo>
             <section className="container">
