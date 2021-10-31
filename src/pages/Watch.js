@@ -8,6 +8,9 @@ import AnimeVideo from "../components/AnimeVideo.js";
 import Comments from "../components/Comments.js"
 
 function Watch(){
+    var Anime = "Anime";
+    var Chapter = "Chapter";
+
     return(
         <>
             <Helmet>

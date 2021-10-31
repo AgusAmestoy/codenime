@@ -1,4 +1,7 @@
 import ReactPaginate from 'react-paginate';
+import Animelist from "../components/Animelist.js";
+
+
 
 const ButtonClassName = "button";
 
@@ -6,7 +9,6 @@ function GeneratePagination(PagesAmount){
     return(
         <>
             <ReactPaginate
-                initialPage={0}
                 previousLabel={<i className="fas fa-angle-left"></i>}
                 nextLabel={<i className="fas fa-angle-right"></i>}
                 marginPagesDisplayed={1}
@@ -20,11 +22,9 @@ function GeneratePagination(PagesAmount){
                 previousClassName={ButtonClassName}
                 nextClassName={ButtonClassName}
                 containerClassName={"pagination-container"}
-
-                onPageActive={""}   //funcion
             />
         </>
-    );
+    );  
 }
 
 export default GeneratePagination;

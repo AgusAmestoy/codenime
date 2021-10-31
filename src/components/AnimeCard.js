@@ -5,7 +5,7 @@ function AnimeCard({anime}) {
 		<article className="anime-card">
 			{/* <Link to ="Watch"> */}
 			<a 
-				href={anime.url} 
+				href={anime.url + "/episode"} 
 				target="_blank" 
 				rel="noreferrer">
 				<figure>
@@ -20,4 +20,4 @@ function AnimeCard({anime}) {
 	)
 }
 
-export default AnimeCard
+export default AnimeCard;

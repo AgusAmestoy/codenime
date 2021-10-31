@@ -498,8 +498,7 @@ footer .info{
 }
 
 footer div{
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: auto 1rem;
 }
 
 footer a{

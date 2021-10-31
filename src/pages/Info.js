@@ -10,6 +10,7 @@ function Info() {
         Script.async = true;
         document.querySelector("body").appendChild(Script);
     })
+    
     return(
     <>
         <Helmet>
