@@ -32,7 +32,7 @@ function Directory(){
             <main className="container">
                 <div className="directory-navbar">  
                     <h1><i className="fab fa-sistrix"></i>{Page} - {MainSearch}</h1>
-                    
+                    <Filter></Filter>
                 </div>
                 <section className="directory-content">
                     <div className="content-container">

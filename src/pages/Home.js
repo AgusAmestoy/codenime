@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar.js";
 
 import {Slider, GenerateSliders} from "../components/Slider.js";
 import Categories from "../components/Categories.js"
+import Filter from "../components/Filters.js";
 
 function Home() {
     var Title = "Title";
@@ -34,6 +35,7 @@ function Home() {
                 </section>
                 <Categories></Categories>
                 <section className="best-recommendations container">
+                    <Filter></Filter>
                     {GenerateSliders(15)}
                 </section>
             </main>

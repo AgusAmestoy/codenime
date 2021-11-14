@@ -20,8 +20,7 @@ function Watch(){
             <Navbar></Navbar>
             <AnimeVideo></AnimeVideo>
             <section className="container">
-                <h4>Comments</h4>
-                <p>Give your opinion on the episode or go ahead and insult anyone who has a waifu inferior to yours!</p>
+                
                 <Comments></Comments>
             </section>
             <Footer></Footer>

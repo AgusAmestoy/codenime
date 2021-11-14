@@ -11,15 +11,18 @@ function Comments(){
         document.querySelector("body").appendChild(Script);
     })
 
-    const disqusShortname = "codenime"
-    const disqusConfig = {
-        url: "http://localhost:3000",
-        identifier: useLocation().pathname.replace("/", ""),
+    const disqusShortname = "codenime";
+
+    var disqusConfig = {
+        url: window.location.href,
+        identifier: window.location.href,
         title: "Add a comment.."
     }
 
     return (
         <div className="comment">
+            <h4>Comments</h4>
+            <p>Give your opinion on the episode or go ahead and insult anyone who has a waifu inferior to yours!</p>
         <Disqus.DiscussionEmbed
             shortname={disqusShortname}
             config={disqusConfig}
