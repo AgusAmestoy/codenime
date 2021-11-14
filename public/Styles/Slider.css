@@ -101,7 +101,8 @@
 
 .best-recommendations .slider-container .recommendations .content{
     position: relative;
-    min-width: 20%;
+    grid-template-columns: repeat(auto-fill, 12rem);
+    display:grid !important;
     max-height: 11rem;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.4);

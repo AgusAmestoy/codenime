@@ -45,6 +45,7 @@ and (orientation:portrait){
     max-width: 50%;
     margin-bottom: 1.2rem;
 }
+
 .container .buttonDark:hover{
     background: rgba(255,255,255,0.75);
     color: #000;

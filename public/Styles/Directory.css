@@ -5,7 +5,7 @@
 }
 
 .anime-list {
-    grid-template-columns: repeat(auto-fill,230px);
+    grid-template-columns: repeat(auto-fill, 12rem);
     display:grid !important;
     width: 100%;
     justify-content: space-between;
@@ -63,10 +63,10 @@ and (orientation:portrait){
 
 
 .Emisionani{
-    grid-template-columns: repeat(auto-fill,230px);
+        grid-template-columns: repeat(auto-fill,14rem);
         display:grid !important;
-        padding: 40px !important; 
-        gap: 40px;
+        padding: 3rem !important; 
+        gap: 3rem;
         width: 100%;
         height: 100%;
 }
@@ -76,6 +76,7 @@ and (orientation:portrait){
     width: 80% !important;
 
 }
+
 .anime-card {
     width: 100%;
     height: 100%;
@@ -86,6 +87,6 @@ and (orientation:portrait){
 }
 
 .animg{
-    width: 225px;
-    height: 337px;
+    width: 13rem;
+    height: 17rem;
 }
