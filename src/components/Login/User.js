@@ -79,7 +79,7 @@ function NoLoged() {
 
     return(
         <>
-        <button id="login" className="button button-rounded">Log in</button>
+        <Link to="/Login" id="login" className="button button-rounded">Log in</Link>
         <LoginPopUp></LoginPopUp>
         </>
     )

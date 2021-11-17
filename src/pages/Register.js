@@ -49,7 +49,7 @@ function RegisterPage(){
                                 <a><i className="fab fa-google"></i></a>
                             </div>
                             <div className="register-form">
-                                <input type="mail" placeholder="Enter Mail" name="Mail" required/>
+                                <input type="email" placeholder="Enter Mail" name="Mail" required/>
                                 <input type="text" placeholder="Username" name="Username" required/>
                                 <input type="password" placeholder="Enter Password" name="Password" required/>
                                 <input type="password" placeholder="Repeat Password" name="RepeatPassword" required/>

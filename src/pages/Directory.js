@@ -1,21 +1,96 @@
-import React from "react";
+import {React, useEffect, useState} from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from 'react-router-dom'
 import Navbar from "../components/Navbar.js";
 import Footer from "../components/Footer.js";
 import GeneratePagination from "../components/Pagination.js";
-
 import Filter from "../components/Filters.js";
 
-import Animelist from "../components/Animelist.js";
 
+var Page ; 
+
+function MainContent(props) {
+	return (
+		<main>
+			<div className="anime-list">
+				{props.animeList.map(anime => (
+					<AnimeCard
+						anime={anime}
+						key={anime.mal_id} />
+				))}
+			</div>
+		</main>
+	)
+}
+
+function AnimeCard({anime}) {
+	return (
+		<article className="anime-card">
+			{/* <Link to ="Watch"> */}
+			<a 
+				href={anime.url + "/episode"} 
+				target="_blank" 
+				rel="noreferrer">
+				<figure>
+					<img className="animg"
+						src={anime.image_url}
+						alt="Anime Image" />
+				</figure>
+				<label>{ anime.title }</label>
+			</a>
+			{/* </Link> */}
+		</article>
+	)
+}
+
+function Animelist(num) {
+	var genre;
+	var status;
+	var page = num;
+
+	if(Page == "Directory"){
+		genre = "";
+		status= "";
+	}else if(Page == "Emision"){
+		genre = "";
+		status= "&status=airing";
+	}else{
+		status= "";
+		genre = "&genre=12";
+	}
+	const [animeList, SetAnimeList] = useState([]);
+
+	useEffect(() => {
+		FetchDefault();
+	});
+
+	const FetchDefault = async ()=>{
+		let url = "https://api.jikan.moe/v3/search/anime?q=&order_by=members&sort=desc&page="+ page +"&limit=32" + genre + status;
+		console.log(url);
+		const temp = await fetch(url)
+			.then(res => res.json());
+
+		SetAnimeList(temp.results);
+	}
+	
+
+	
+	return (
+		<>
+		<MainContent
+			animeList={animeList}>
+		</MainContent>
+		</>
+	);
+}
 
 function Directory(){
-    var Page = useLocation().pathname.replace("/", "");
+   	Page = useLocation().pathname.replace("/", "");
     Page = Page.replace(/([A-Z])/g, ' $1').trim();
+
     const MainSearch = "All Animes";
 
-    React.useEffect(() => {   
+    useEffect(() => {   
 		const Script = document.createElement("script");
 		Script.src = "./Script/Pagination.js";
 		Script.async = true;
@@ -38,7 +113,7 @@ function Directory(){
                     <div className="content-container">
                     {Animelist()}
                     </div>
-                    {GeneratePagination(999)}
+                    {GeneratePagination(20)}
                 </section>
             </main>
             <Footer></Footer>

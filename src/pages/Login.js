@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Footer from "../components/Footer.js";
 import Navbar from "../components/Navbar.js";
 import {Link} from 'react-router-dom';
+import Pagent from "../components/Pagent.js";
 
 function Login(){
     React.useEffect(() => {
@@ -24,7 +25,8 @@ function Login(){
                 <title>Log In - CodeNime</title>
             </Helmet>
             <Navbar></Navbar>
-            <main className="pop-up static register">
+            <Pagent></Pagent>
+            {/* <main className="pop-up static register">
                 <div className="login-container">
                     <form className="login-content-container">
                         <h2>Log in</h2>
@@ -46,7 +48,7 @@ function Login(){
                         <span className="button-span"><Link to="/Register">Do not have an account?</Link></span>
                     </form>
                 </div>
-            </main>
+            </main> */}
             <Footer></Footer>
         </>
     )
