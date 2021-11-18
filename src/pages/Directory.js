@@ -46,7 +46,7 @@ function AnimeCard({anime}) {
 function Animelist(num) {
 	var genre;
 	var status;
-	var page = num;
+	var page = "1";
 
 	if(Page == "Directory"){
 		genre = "";
@@ -73,8 +73,6 @@ function Animelist(num) {
 		SetAnimeList(temp.results);
 	}
 	
-
-	
 	return (
 		<>
 		<MainContent
@@ -91,10 +89,15 @@ function Directory(){
     const MainSearch = "All Animes";
 
     useEffect(() => {   
-		const Script = document.createElement("script");
-		Script.src = "./Script/Pagination.js";
-		Script.async = true;
-		document.querySelector("body").appendChild(Script);
+
+		const PaginationContainer = document.querySelector('.pagination-container');
+		const Button = PaginationContainer.querySelectorAll('.button');
+		Button.forEach( item => {  
+			item.addEventListener( 'click' , event => {   
+				//Animelist(  item.firstChild.textContent  );
+			})
+		}); 
+
 	}, [])
 
     return(
@@ -111,9 +114,13 @@ function Directory(){
                 </div>
                 <section className="directory-content">
                     <div className="content-container">
-                    {Animelist()}
+                    {
+						Animelist()
+					}
                     </div>
-                    {GeneratePagination(20)}
+                    {
+						GeneratePagination(20)
+					}
                 </section>
             </main>
             <Footer></Footer>

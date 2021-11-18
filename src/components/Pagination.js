@@ -4,7 +4,6 @@ import ReactPaginate from 'react-paginate';
 const ButtonClassName = "button";
 
 function GeneratePagination(PagesAmount){
-    
     const contadorDePaginas = (data) =>{
         return data;
     }
