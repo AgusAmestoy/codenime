@@ -21,7 +21,7 @@ function AnimeVideo(){
         <>
             <section className="Video-container">
                 <ReactPlayer
-                    url='https://www60.ff-01.com/token=JxSX197PcOQB_pgLebihpQ/1632620404/181.171.0.0/38/a/f4/8da35b92a3c560674e0600c208d57f4a-480p.mp4'
+                    url='https://www.youtube.com/watch?v=_N_PcApaK5A'
                     controls = "true"
                     width="100%"
                     height="100vh"
