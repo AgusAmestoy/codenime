@@ -35,10 +35,10 @@ function RegisterPage(){
                 <div className="register-container">
                     <div className="image-showcase">
                         <ul>
-                            <li><img src="/img/Album/akari.jpg" alt="akari"></img></li>
-                            <li><img src="/img/Album/toshino.jpg" alt="toshino"></img></li>
-                            <li><img src="/img/Album/y-las-monas-chinas.jpg" alt="un gato montes"></img></li>
-                            <li><img src="/img/Album/hentai-collage-not-hd.jpg" alt="definitivamente no es hentai"></img></li>
+                            <li><img src="/img/Album/Kimi.jpg" alt="akari"></img></li>
+                            <li><img src="/img/Album/kon.jpg" alt="toshino"></img></li>
+                            <li><img src="/img/Album/dbs.jpg" alt="un gato montes"></img></li>
+                            <li><img src="/img/Album/fate.jpg" alt="definitivamente no es hentai"></img></li>
                         </ul> 
                     </div>
                     <div className="Register-content">
