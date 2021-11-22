@@ -23,11 +23,11 @@ function NavBar(){
         <header className="Home-header">
             <div className="Home-header-top">
                 <div className="top">
-                    <Link to="/"><h1 className="Navbar-logo">Code<em>Nime</em></h1></Link>
+                    <Link to="/Home"><h1 className="Navbar-logo">Code<em>Nime</em></h1></Link>
                     <a id="show-menu" className="icon"><i className="fa fa-bars"></i></a>
                 </div>
                 <nav className="Home-nav">
-                    <NavLink activeClassName="active" exact to="/">Home</NavLink>
+                    <NavLink activeClassName="active" exact to="/Home">Home</NavLink>
                     <NavLink activeClassName="active" exact to="/HentaiZone">+18</NavLink>
                     <NavLink activeClassName="active" exact to="/Directory">Directory</NavLink>
                     <NavLink activeClassName="active" exact to="/Emision">Emision</NavLink>

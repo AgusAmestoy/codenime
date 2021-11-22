@@ -27,10 +27,10 @@ function Info() {
             </div>
             <div className="showcase-content">
                 <h2>Watch Anime Online free!</h2>
-                <p>Just with some small advertisements to finance us</p>
+                <p>Enjoy anime in the best way</p>
                 <div className="buttons">
                     <Link to="/Register" className="buttonDark button-large button-rounded2">Register</Link>
-                    <Link to="/" className="buttonDark button-large button-rounded2">Continue</Link>
+                    <Link to="/Home" className="buttonDark button-large button-rounded2">Continue</Link>
                 </div>
             </div>
         </header>

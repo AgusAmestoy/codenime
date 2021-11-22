@@ -5,7 +5,7 @@
 .showcase{
     width: 100%;
     min-height: 93vh;
-    position: relative; /* luego le agregamos para que tenga una imagen random o algo asi */
+    position: relative; 
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5) ), url(../img/Background/background.gif) no-repeat center/cover;
 }
 

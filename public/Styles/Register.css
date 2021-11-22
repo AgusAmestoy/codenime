@@ -1,6 +1,7 @@
 .register{
+    min-height: 85vh;
     padding: 2rem;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4) ), url("../img/Background/backgroundr.gif") no-repeat center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4) ), url("../img/Background/goyo.gif") no-repeat center/cover;
     backdrop-filter: blur(1rem);
 }
 

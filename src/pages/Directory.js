@@ -41,19 +41,22 @@ function Animelist({ pageContentParam }) {
 	}
 	let pageContent = pageContentParam;
 	//console.log(pageContent);
-
+	var excluir;
 	var genre;
 	var status;
 
 	if (Page == 'Directory') {
-		genre = '';
+		genre = '&genre=12';
 		status = '';
+		excluir = '&genre_exclude=1';
 	} else if (Page == 'Emision') {
-		genre = '';
+		genre = '&genre=12';
 		status = '&status=airing';
+		excluir = '&genre_exclude=1';
 	} else {
 		status = '';
 		genre = '&genre=12';
+		excluir = ''
 	}
 	const [animeList, SetAnimeList] = useState([]);
 
@@ -65,11 +68,7 @@ function Animelist({ pageContentParam }) {
 
 	const FetchDefault = async () => {
 		let url =
-			'https://api.jikan.moe/v3/search/anime?q=&order_by=members&sort=desc&page=' +
-			pageContent +
-			'&limit=32' +
-			genre +
-			status;
+			'https://api.jikan.moe/v3/search/anime?q=&order_by=members&sort=desc&page=' +pageContent +'&limit=32' +genre + excluir + status ;
 		console.log(url);
 		const temp = await fetch(url).then((res) => res.json());
 

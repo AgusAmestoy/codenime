@@ -18,8 +18,8 @@ import Login from './pages/Login';
 function App() {
   return (
     <>
-      <Route exact path="/" component={Home}/>
-      <Route exact path="/Information" component={Info}/>
+      <Route exact path="/Home" component={Home}/>
+      <Route exact path="/" component={Info}/>
       <Route exact path="/Directory" component={Directory}/>
       <Route exact path="/HentaiZone" component={HentaiZone}/>
       <Route exact path="/Emision" component={Emision}/>
